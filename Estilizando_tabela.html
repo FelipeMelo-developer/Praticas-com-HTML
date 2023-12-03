@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        table {
+            -webkit-box-shadow: 10px 16px 10px -6px rgba(127,141,219,0.81);
+            -moz-box-shadow: 10px 16px 10px -6px rgba(127,141,219,0.81);
+            box-shadow: 10px 16px 10px -6px rgba(127,141,219,0.81);
+        }
+        table thead {
+            background-color: black;
+            color: white;
+        }
+        table tfoot {
+            background-color: rgba(120, 120, 120, 0.868);
+        }
+        table tbody tr:nth-child(even) td {
+            background-color: rgba(150, 150, 150, 0.338);
+        }
+        table tbody tr:hover td {
+            background-color: rgba(34, 13, 119, 0.338)
+   
+        }
+        table tbody tr:hover td {
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 align="center">Candidatos a vaga de jovem aprendiz</h1>
+<br>
+<table width="400" cellspacing="0" cellpadding="5" align="center">
+    <caption>Tabela de Idade dos candidatos</caption>
+    <thead>
+        <tr>
+            <th colspan="2" align="center">Inscritos:</th>
+         </tr>
+            <tr>
+                <th align="center">Nome</th>
+                 <th align="center">Idade</th>
+             </tr>
+    </thead>    
+    <tbody>
+        <tr>    
+            <td>Rebeca</td>
+            <td>16</td>
+        </tr>
+        <tr>    
+            <td>Luiz</td>
+            <td>15</td>
+        </tr>
+        <tr>    
+            <td>Guilherme</td>
+            <td>17</td>      
+        </tr>
+        <tr>    
+            <td>Ana</td>
+            <td>15</td>           
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Media</td>
+            <td>15,5</td>
+        </tr>
+    </tfoot>
+</table>
+</body>
+</html>

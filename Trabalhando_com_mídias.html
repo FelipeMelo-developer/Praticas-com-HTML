@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Mídias</title>
+</head>
+<body style="background-color: rgb(139, 139, 139);" > 
+    <h1>Trabalhando com Mídias</h1>
+    <p></p>
+    
+    <div>
+        <h2>Tag < img ></h2>
+        <p>< img scr ""></p> 
+        <p>"jpg 200 x 200"</p>
+        <img src="img/baby yoda jpg.jfif" width="200" height="200" >
+        <br>
+        <p>png</p>
+         <p>< alt > faz uma leitura com robo sobre a imagem usado para acessibilidade </alt> </p>   
+
+        <img title="Logotipo" alt="Descrição do Logotipo leitura feita por robo" src="img/Master-Yoda-PNG-HD.png" width="200" height="200" >
+        <br>
+        <p>svg esse tipo de arquivo trabalha com vetores</p>
+        <svg></svg>
+        <p>gif</p>
+        <img src="img/icegif-911.gif">
+    </div>
+    <hr>
+    
+    <div>
+        <h2>Tag < audio ></audio></h2>
+        <audio controls>
+            <source src="/Projetos_HTML/DIO/audio/711960__davejf__relax-music.mp3"/>
+            Seu navegador não tem suporte para este áudio
+        </audio>
+        <br>
+        <input type="range">
+
+    </div>
+    <hr>
+
+    <div>
+        <h2>Tag < video ></audio></h2>
+        <video controls>
+            <source src="video/Abertura do Canal.mp4">
+            <!--TEM COMO COLOCAR 2 FORMATOS DE VIDEOS EX:webm, UTILIZANDO O SOURCE MAIS EXECUTADO SOMENTE UM-->
+            Seu navegador não suporta vídeo
+        </video>
+
+    </div>
+    <hr>
+
+    <div>
+        <h2>Tag < track ></audio></h2> <!--Acessibilidade-->
+        <p>Voltado para acessibilidade</p> <!--deixar um arquivo separado com as descrições-->
+        <video controls>
+            <source src="video/Djavan - Um Amor Puro (Ao Vivo).mp4"/>
+            <!--TEM COMO COLOCAR 2 FORMATOS DE VIDEOS EX:webm, UTILIZANDO O SOURCE MAIS EXECUTADO SOMENTE UM-->
+            Seu navegador não suporta vídeo
+            <track src="legenda.vtt" kind="captions" srclang="en"/>  <!--Você consegue definir o texto que vai aparecer em determinado minuto utilizado em filmes legendados-->
+            <track src="legenda.vtt" kind="captions" srclang="pt-br"/> 
+            <track default src="legenda.vtt" kind="captions" srclang="en"/> <!--definindo carregamento padrão-->
+            
+        </video>
+         
+    </div>
+    <hr>
+
+    <div>
+        <h2>Tag < inframe ></audio></h2>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/agrXgrAgQ0U?si=a00OWi327xmb46tA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br>
+
+        <p><h2>Endereço</h2></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.173840138211!2d-43.27193298011263!3d-22.878620709009077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997d18e80c4569%3A0xc62bd5a1dabb0de5!2sShopping%20Nova%20Am%C3%A9rica!5e0!3m2!1spt-BR!2sbr!4v1701450533870!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <hr>
+
+    
+</body>
+</html>

@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <hr>
+       <H1>Estudo sobre Formulários</H1> <!--/*comentaario para CSS*/-->     
+       <p></p>
+       <p><H2>Tags Form</H2></p>
+    
+
+    <form name="Cadastro" onsubmit="alert('Enviei o formulário')" target="" method="post" action="#"> 
+
+        
+        <!-- pode ser colocado um nome para identificação e o Action seria para onde essas informações vão-->
+        Nome:  <input type="text" name="name" /><br><br>
+        Idade: <input type="number" name="age" /><br><br>
+        Senha: <input type="password" name="password" /><br>
+        <br>
+        <button type=" submit">Enviar</button>
+        <br>
+        <br>
+        <br><hr>
+        <p><H2>Tags Input e seus tipos</H2></p> 
+
+        Campo pra ser preenchido com:
+            <form>
+            <label>Texto: </label><input type="tex"  /> <br><br> <!--caixa de Campo texto--> 
+            <label>Numeros: </label><input type="number" min="0" max="99" /> <br><br>
+            <label>Ranger: </label> <input type="range" min="0" max="100"/> max <br><br>
+            <label>Color:</label> <input type="color"/> <br><br>
+            <label>E-mail:</label> <input type="email"/> <br><br>
+            <label>Url:</label> <input type="url"/> <br><br>
+            <label>Date:</label> <input type="date"/> <br><br>
+            <label>Week:</label> <input type="week"/> <!--Não funciona no firefox--> <br><br>
+            <label>Month:</label> <input type="month"/> <!--Não funciona no firefox--> <br><br>
+            <label>checkbox:</label><input type="checkbox"/><input type="checkbox"/> <br><br>
+            <label>Rario:</label><input type="radio" name="aceito"/><input type="radio" name="aceito"/> <br><br>
+            <label>File:</label> <input type="file"/> <br><br>
+            <label>Hidden:</label> <input type="hidden"/> Informação a ser enviada sem ser vista pelo usuario <br><br> <!--Informação a ser enviada sem ser vista pelo usuario-->
+            <label>Search:</label> <input type="search"/> <br><br>
+            <label>button: </label><input type="submit" value="enviar" />
+        </form>
+    
+        <hr>
+
+
+        <p><H2>Checkbox e Radio</H2></p> 
+
+        <form method="get" > 
+            <!--Caso for enviar uma lista de valor enviar via method="post"-->
+            
+
+        <h3>Você selecionou: Pizza Calabresa</h3>
+        <p>Quais opcionais você deseja?
+            <br>
+            <br>
+            <input type="checkbox" name="opcional[]" value="queijo" /><label>+ queijo</label><br> <!--esse cara aqui [] é uma lista-->
+            <input type="checkbox" name="opcional[]" value="calabreza" /><label>+ calabreza</label><br>
+            <input type="checkbox" disabled name="opcional[]" value="cebola" /><label>+ cebola</label><br> <!--Caso queira deixar algum item desabilitado para marcação-->
+            <input type="checkbox" name="opcional[]" value="azeitona" /><label>+ azeitona</label><br>
+
+        <p>Borda recheada?</p>
+            <input type="radio" name="aceito" value="Sim" />  Sim<br>
+            <input type="radio" name="aceito" value="Não" /> Não <br>
+        
+         <p>Bebida</p>
+         <input type="radio" name="Bebida" value="Suco" /> Suco<br>
+         <input type="radio" name="Bebida" value="Refrigerante" /> Refrigerante <br>
+         <input type="radio" name="Bebida" value="Água" /> Água<br>
+         <input type="radio" name="Bebida" value="Nenhuma" /> Nenhuma <br>
+        <br>
+         <label>button: </label><input type="submit" value="enviar" />
+        </form>
+        <hr>
+
+        <p><H2>Button e seus tipos</H2></p>
+
+        <form method="get">
+            Nome:  <input type="text" name="name" /><br><br>
+            Idade: <input type="number" name="age" /><br><br>
+            Senha: <input type="password" name="password" /><br>
+
+            <button type="button" onclick="alert('Enviei o formulário')" target="" method="post" action="#"> Clicável</button><br> 
+            <!--onclick após clicar exibirar uma mensagem-->
+            <button type="reset">limpar</button><br>
+            <!--onclick após clicar exibirar uma mensagem-->
+        </form>
+
+        <form onsubmit="" method="get">
+            <!--com o onsubmit entramos no javascript e serve para validar se os campos estão preenchidos corretamente-->
+            Nome *:  <input type="text" name="name" /><br><br>
+            Idade *: <input type="number" name="age" /><br><br>
+            Senha *: <input type="password" name="password" /><br>
+            <button type="submit">Enviar</button>
+            <!--com o atributo submit ele envia as informações-->
+        </form>
+        <hr>
+
+        <p><H2>Select e seus tipos e Textarea</H2></p>
+
+        <form onsubmit="" method="get">
+            <label>Nome:</label>  <input type="text" name="name" /><br><br>
+            <label>Cargo</label>
+            <select name="role>"
+
+                <option value="Selecione">Selecione o cargo</option>
+                <option value="Selecione">Selecione o cargo</option>
+                <option value="Gerente">Gerente</option>
+                <option value="Diretor">Diretor</option>
+                <option value="Presidente">Presidente</option>
+                <option value="">Selecione o cargo</option>
+
+            </select>
+          <br>
+          <br>  
+            <label>Assunto:</label><input type="text" name="subject" /><br>
+            <label>Mensagem</label>
+            <textarea name="message"></textarea>     
+            <button type="submit">Enviar</button>
+        </form>
+    </form>
+        
+ 
+
+    
+</body>
+</html>

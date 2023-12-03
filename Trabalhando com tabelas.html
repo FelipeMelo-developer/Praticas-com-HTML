@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabanhando com tabelas</title>
+    <style>
+    
+        table tr:nth-child(even){
+        background-color: rgb(160, 200, 200);
+    }
+        table tr:hover {
+            background-color: rgba(40, 40, 206, 0.59);
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Estudos de tabelas</h1>
+    <br>
+    <h2>Tag < table ></table></h2>
+<br>
+<table sumary="Essa Tabela é referente a idade do desenvolvedor desta tabela" border="1" width="250" cellspacing="2" cellpadding="5" align="center">
+    <tr>
+        <td align="center">Nome</td>
+        <td align="center">Idade</td>
+    </tr>
+    <tr>
+        <td>Felipe</td>
+        <td>32</td>
+    </tr>
+</table>
+<br>
+<h2>Tag < tr ></h2>
+<table sumary="Essa Tabela é referente a alunos fictícios de um curso" border="1" width="250" cellspacing="2" cellpadding="5" align="center">
+    <tr>
+        <td align="center">Nome</td>
+        <td align="center">Idade</td>
+        <td align="center">Cidade</td>
+    </tr>
+    <tr id="1"> <!--O id serve para poder identificar futuramente no uso do javascript-->
+        <td>Jorge</td>
+        <td align="center">32</td>
+        <td align="center">Rio de Janeiro</td>
+    </tr>
+    <tr id="2">
+        <td>Amanda</td>
+        <td align="center">26</td>
+        <td>Florianopolis</td>
+    </tr>
+    <tr id="3">
+        <td>Carol</td>
+        <td align="center">21</td>
+        <td align="center">Curitiba</td>
+    </tr>
+    <tr id="4">
+        <td>Gustavo</td>
+        <td align="center">28</td>
+        <td align="center">Aracaju</td>
+    </tr>
+    <tr id="5">
+        <td>Samantha</td>
+        <td align="center">30</td>
+        <td align="center">São Paulo</td>
+    </tr>
+</table>
+<br>
+<table>
+    <h2>Tag < tr > e < th ></h2>
+<table sumary="Tabela teste" border="1" width="250" cellspacing="2" cellpadding="5" align="center">
+    <tr>
+        <th title="Nome completo" align="center">Nome</th> <!--th = Cabeçalho-->
+        <th title="Idade" align="center">Idade</th>
+    </tr>
+    <tr>
+        <td>Juliana</td>
+        <td align="center">32</td>
+            </tr>
+    <tr>
+        <td>Andressa</td>
+        <td align="center">26</td>
+          </tr>
+    <tr>
+        <td>Gabriel</td>
+        <td align="center">21</td>
+    </tr>
+</table>
+<br>
+
+<h2>Tag < tbody > ,  < thead > , < tfoot ></h2>
+<table border="1" width="250" align="center">
+    <caption>Tabela de Colocação Concurso</caption>
+    <thead>
+            <tr>
+                <th align="center">Nome</th>
+                <th align="center">Colocação</th>
+             </tr>
+    </thead>    
+    <tbody>
+        <tr>    
+            <td>Raquel</td>
+            <td>1º</td>
+        </tr>
+        <tr>
+            <td>Otavio</td>
+            <td>2º</td>
+        </tr>
+        <tr>
+            <td>Jandira</td>
+            <td>3º</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Competidores</td>
+            <td align="center">3</td>
+        </tr>
+    </tfoot>
+</table>
+</body>
+</html>
+stro
