@@ -5,10 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entendendo HTML Semântica</title>
+    <style>
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li a{
+            padding: 10px 15px;
+            color: blue;
+            text-decoration: none;
+            border-radius: 15px 0;   
+        }
+        nav ul li a:hover{
+            color: green;
+            background: lawngreen;
+        }
+    </style>
+
+    <style>
+        blockquote {
+            background: rgb(99, 196, 99);
+            padding: 15px;
+            margin-left: 0px;
+            border-left: red solid;
+            border-right: red solid ;
+            border-top-right-radius: 10px;
+
+        }
+        article time{
+            font-style: italic;
+        }
+        article q{
+            font-style: italic;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-
+        <nav>
+            <ul>
+              <li><a href="#">Página inicial</a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </nav>
     </header>
     
     <main>
@@ -101,10 +143,72 @@
         <p>Tag utilizada para rodapé</p>
 
 
-    <h2>nav, section, aside</h2>
+    <h2>Tags Section, Aside e Nav</h2>
+
+    <p>A tag < section > define uma seção em um documento.</p>
+    <p>A tag section é utilizada para marcar as seções de conteúdo de uma página. Com Esse elemento agrupamos de forma lógica nosso conteúdo, separando a informação em áreas diferentes. O principal objetivo é retirar essa responsabilidade das divs. Tendo como principal diferencial a navegação semântica com HTML 5.</p>
+    <p>Digamos que na sua página inicial você tenha três chamadas principais:
+        Clientes, Serviços e Notícias. Aí um ótimo lugar para você usar a tag section. Cada uma dessas chamadas podem ser um elemento de seção. A tag pode ser usada em conjunto com o H1, H2, H3, H4, H5 e H6, elementos para indicar a estrutura do documento. Ele pode conter um header e um footer se necessário.</p>
+    <P><strong>Exemplo:</strong></P>
+    <img src="/Praticas-com-HTML/Imagens/section.png" alt="Dividir em seções de assuntos utilizando a tag section 1º identificada como Rock, 2º jazz, 3º Hip-hop. Todos com titulo em h2,  ">
+
+        <P>A tag section em resumo são seções com ligação com assunto principal do site</P>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+
+        <P>Já a tag aside são seções que não tem ligação com o asunto principal da página como exemplo: fale com o corretor , fazer anuncios e etc...</P>
+        <p>O elemento HTML < aside> representa uma seção de uma página que consiste de conteúdo que é tangencialmente relacionado ao conteúdo do seu entorno, que poderia ser considerado separado do conteúdo. Essas seções são, muitas vezes, representadas como barras laterais. Elas muitas vezes contem explicações laterais, como a definição de um glossário; conteúdo vagamente relacionado, como avisos; a biografia do autor; ou, em aplicações web, informações de perfil ou links de blogs relacionados.</p>
+
+            <p><i>Note: Notas de uso: <strong>Não use </strong>o elemento < aside> para texto entre parenteses, pois este tipo de texto é considerado parte do fluxo principal.</i></p>
+        
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+
+        <p><h4>Nav</h4></p>
+        <p>O Elemento HTML de Navegação (<nav>) representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação.</p>
+        <P><strong>Note: Notas de utilização:</strong></P>
+        <p>em todos os links de um documento devem estar dentro de um elemento < nav>, o qual é destinado apenas para grupos importantes de links de navegação; tipicamente o elemento < footer> contém uma lista de links que não precisam estar em um elemento < nav></nav></p>
+        <p>Um documento pode ter vários elementos <nav>, por exemplo, um para navegação no site e outro para navegação dentro da página.</p>
+        <p>Agentes de usuário, como leitores de tela para usuários deficientes, podem utilizar este elemento para determinar se a renderização inicial do conteúdo do mesmo deve ser omitida.</p>
 
     <h2>article, blockquote e Q</h2>
 
+    <h2>article</h2>
+    <p>Artigo do conteudo ele representa uma composição independente em um documento, página, aplicação, ou site, ou que é destinado a ser distribuido de forma independente ou reutilizável, por exemplo, em sindicação. Este poderia ser o post de um fórum, um artigo de revista ou jornal, um post de um blog, um comentário enviado por um usuário, um gadget ou widget interativos, ou qualquer outra forma de conteúdo independente.</p>
+    <br>
+    <p><Strong>Exemplo 1:</Strong></p>
+    <article>
+        <p>Qual o seu prato favorito?</p>
+        <article>É churrasco!</article>
+    </article>
+    <br>
+     <strong>Obs:</strong>
+        <p><li>Quando um elemento < article > está aninhado, o elemento interior representa um artigo relacionado com o elemento exterior. Por exemplo, os comentários do post de um blog podem ser elementos < article > aninhados em < article > representando o post do blog.</li>
+        <br>
+        <li>Informações sobre o autor de um elemento < article > podem ser fornecidas através do elemento < address > ,mas ele não se aplica aos elementos < article > aninhados.</li>
+        <br>
+        <li>A data e hora de publicação de um elemento < article > pode ser descrita usando o atributo pubdate de um elemento < time >.</li></p>
+        <br>
+    <p><Strong>Exemplo 2:</Strong></p>
+    <article>
+        <h1>Descoberta de vida em outr planeta</h1>
+        <p>Artigo publicado em <time pubdate>11/01/2024 18:57</time></p>
+        <p>Segundo a professora Catherine Heymans, Astrônoma Real da Escócia <q cite="https://g1.globo.com/ciencia/noticia/2023/10/03/por-que-cientistas-dizem-que-estamos-perto-de-achar-vida-em-outro-planeta.ghtml">Vivemos em um universo infinito, com estrelas e planetas infinitos. E para muitos de nós, tem sido óbvio que não podemos ser os únicos seres inteligentes no universo.</q> </p>
+        <p>Um telescópio da NASA pode ter descoberto possíveis evidências de vida em um planeta distante.</p>
+        <p>Isso porque pode ter sido detectada uma molécula chamada sulfeto de dimetila (DMS).</p>
+        <!--Pode ser aplicado Style do CSS no head-->
+        <blockquote cite="https://g1.globo.com/ciencia/noticia/2023/09/12/vida-alienigena-nasa-analisa-molecula-em-planeta-distante-que-na-terra-so-e-produzida-por-seres-vivos.ghtml">
+            Sulfato de dimetila é um composto químico com fórmula (CH3O)2SO2.  Ao menos na Terra, isso só é produzido por organismos vivos. 
+        </blockquote>
+        
+        <p>Os pesquisadores frisam que essa possível detecção no planeta a 120 anos-luz de distância "não é robusta" e são necessários mais dados para confirmar a sua presença.</p>
+        <p>A descoberta foi feita pelo Telescópio Espacial James Webb da NASA. Os pesquisadores também encontraram metano e CO2 na atmosfera do planeta.</p>
+
+  
     <h2>Figure, Figcaption e Picture</h2>
 
     <h2>O que é SEO</h2>
@@ -112,7 +216,11 @@
     </main>
 
     <footer>
-
+        <p><strong>Referencias:</strong></p>
+        <a href="">DIO</a>
+        <a href="https://developer.mozilla.org/"> mdn web docs</a>
+        <a href="https://www.w3schools.com/tags/tag_aside.asp">W3schools</a>
+        
     </footer>
 </body>
 </html>
