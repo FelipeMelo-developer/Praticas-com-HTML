@@ -5,10 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entendendo HTML Semântica</title>
+    <style>
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li a{
+            padding: 10px 15px;
+            color: blue;
+            text-decoration: none;
+            border-radius: 15px 0;   
+        }
+        nav ul li a:hover{
+            color: green;
+            background: lawngreen;
+        }
+    </style>
 </head>
 <body>
     <header>
-
+        <nav>
+            <ul>
+              <li><a href="#">Página inicial</a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </nav>
     </header>
     
     <main>
@@ -127,8 +150,11 @@
         <aside></aside>
 
         <p><h4>Nav</h4></p>
-
-
+        <p>O Elemento HTML de Navegação (<nav>) representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação.</p>
+        <P><strong>Note: Notas de utilização:</strong></P>
+        <p>em todos os links de um documento devem estar dentro de um elemento < nav>, o qual é destinado apenas para grupos importantes de links de navegação; tipicamente o elemento < footer> contém uma lista de links que não precisam estar em um elemento < nav></nav></p>
+        <p>Um documento pode ter vários elementos <nav>, por exemplo, um para navegação no site e outro para navegação dentro da página.</p>
+        <p>Agentes de usuário, como leitores de tela para usuários deficientes, podem utilizar este elemento para determinar se a renderização inicial do conteúdo do mesmo deve ser omitida.</p>
 
     <h2>article, blockquote e Q</h2>
 
