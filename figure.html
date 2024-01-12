@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    
+    <style>
+        blockquote {
+            background: rgb(138, 211, 138);
+            padding: 15px;
+            margin-right: 30%;
+        }
+    </style>
+</head>
+<body>
+    <a href="/Praticas-com-HTML/Entendendo HTML Semântico.html"><button >Retornar</button></a>
+    <h1>Tag figure</h1>
+    <p>O elemento < figure > HTML representa conteúdo autocontido, potencialmente com uma legenda opcional, que é especificada usando o < figcaption > elemento. A figura, sua legenda e seu conteúdo são referenciados como uma única unidade.</p>
+    
+    <p><strong>Exemplo com < figure > para acessibilidade:</strong></p>
+    <figure>
+        <img src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/elephant-660-480.jpg" alt="Um elefante ao pôr do sol" />
+        <figcaption>Descrição: Um elefante ao pôr do sol</figcaption>
+    </figure>
+    <p>visualmente não teria diferença se fizer somente em htm com a tag < p >, Mas semanticamente faz total diferença, para que a maquina ou motores de busca entendam do que se trata facilitando o conteudo para acessibilidade. </p>
+    <br>
+            <p><strong>Exemplo com < p >:</strong></p>
+            <img src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/elephant-660-480.jpg" alt="Um elefante ao pôr do sol" />
+            <p>Descrição: Um elefante ao pôr do sol</p>
+    
+    <h1>Tag picture</h1>
+    <p>O elemento HTML < picture > é um container usado para especificar múltiplos elementos < source > para um elemento específico < img > contido nele.</p>
+    <p>O navegador irá escolher a imagem mais adequada de acordo com o layout atual da página, caracteristicas do dispositivo em que será exibido (p.e. um dispositivo normal ou um hiDPI), e a habilidade do navegador de renderizar um certo tipo de imagem (p.e., envie uma imagem WebP para os navegadores baseados no Chromium ou PNG para navegadores não-Chromium); se não houver correspondência entre os elementos < source >, o arquivo especificado pelo elemento < img > será selecionado. A imagem selecionada é então exibida no espaço ocupado pelo elemento < img >.</p>
+    
+    
+    <blockquote>
+        <p><strong>Para ver o exemplo diminua o tamanho da página abaixo de 800px e visualise a mudança da imagem abaixo</strong></p>
+    </blockquote>
+
+    <picture>
+        <source srcset="/Praticas-com-HTML/Imagens/yoda-star-wars-trilogia-original-imperio-contra-ataca-reproducao_widelg.jpg" media="(min-width: 800px)"> 
+        <img src="/Praticas-com-HTML/baby yoda jpg.jfif">
+    </picture>
+    <br>
+    <br>
+    <a href="/Praticas-com-HTML/Entendendo HTML Semântico.html"><button >Retornar</button></a>
+
+</body>
+</html>
