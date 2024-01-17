@@ -4,18 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos em especiais</title>
+    <style>
+        kbd {
+            border: solid 1px red;
+        }
+        code {
+            background-color: rgb(236, 201, 230);
+            color: red;
+        }
+        pre {
+            background-color: rgb(248, 208, 227);
+            color: rgb(11, 20, 11);
+        }
+        pre > code {
+            background-color: rgb(240, 130, 163);
+            color: rgb(102, 0, 0);
+
+        }
+        pre > p {
+            font-style: italic;
+            color: rgb(110, 107, 107);
+            
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+              <li><a href="/Praticas-com-HTML/HTML_Recursos especiais.html">Página inicial</a></li>
+              <li><a href="#">Datalist</a></li>
+              <li><a href="#">code, kbd, pre</a></li>
+              <li><a href="#">details, summary</a></li>
+              <li><a href="#">Mark</a></li>
+              <li><a href="#">meter</a></li>
+              <li><a href="#">canvas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
     <h1>Tag datalist</h1>
 
+    <h3>Select box</h3>    Lhe da opções para serem escolhidas que só podem ser essas
+    <select name="browsers" id="">
+        <option value="">Selecione um navegador</option>
+        <option value="chorme">Google chorme</option>
+        <option value="firefox">Mozila Firefox</option>
+        <option value="edge">Microsoft Edge</option>
+        <option value="safari">Safari</option>
+        <option value="opera">Opera</option>
+    </select>
+        
+    <h3>Já o Datalist</h3> Serve como uma busca sugerida. Exemplo para ser utilizado em um e-commerce para opções de busca.
+    <input list="browsers" type="search" name="search"/>
+    <datalist id="browsers">
+        <option>Google chorme</option>
+        <option>Mozila Firefox</option>
+        <option>Microsoft Edge</option>
+        <option>Safari</option>
+        <option>Opera</option>
+    </datalist>
+
     <h1>Tags code, kbd, pre</h1>
+    <br>
+    <p>A tag <strong>kbd</strong> serve para informar que o texto é uma tecla de teclado</p>
+    <p><strong>Exemplo:</strong></p> <!--pode ser emplementado com CSS no head-->
+    <p>Para copiar essa informação presione <kbd>CTRL</kbd>  + <kbd>C</kbd></p>
+    <br>---------
+    <p>A tag <strong>code</strong> serve para informar que o texto é um código</p>
+    <p><strong>Exemplo:</strong></p> <!--pode ser emplementado com CSS no head-->
+    <p>Para trocar o fundo de um elemento, utilize o comando <code>background-color</code></p>
+    <br>---------
+    <p>A tag <strong>pre</strong> serve como no exemplo da tag <code>code</code> porem em formato mono space, já com uma borda.</p>
+    <p><strong>Exemplo:</strong></p> <!--pode ser emplementado com CSS no head-->
+    <p>Comando completo de alterar cor de fundo:</p>
+    <pre>
+        <p><strong>//Neste momento você aplica desta forma:</strong></p>
+        <code>
+        code {
+            background-color: rgb(236, 201, 230);
+            color: red;
+        }  
+        </code>
+    </pre>   
 
     <h1>Tag details, summary</h1>
-    <h1>Tag Mark</h1>
-    <h1>Tag meter</h1>
-    <h1>Tag canvas 1</h1>
-    <h1>Tag canvas 2</h1>
-    <h1>Novos atributos bem úteis no HTML5</h1>
+    
+        <p><strong>Pode ser colocado um botão de abre e fecha Exemplo:</strong></p>
+        <details>
+        <p>Para executar essa ação utilize o comando <code>background-color</code> no CSS</p>
+        </details>
+        <br>
+        <p>Por padrão é adicionado a opção saiba mais na tag <code>details</code>, caso queira personalizar basta utilizar a tag <code>summary</code></p>
+        <details>
+            <summary>Como troco a cor de fuundo de um elemeento no HTML?</summary>
+            <p>Para executar essa ação utilize o comando <code>background-color</code> no CSS</p>
+            
+        </details>    
+
+    <h1>Tag meter e progress</h1>
+    <p>Métrica</p>
+    <meter max="100" min="0" value="50"></meter>
+    <br>
+    <p>Progresso carregando e oscilando </p>
+    <progress></progress>
+    <br> 
+    <p>Progresso delimitato em 80%</p>
+    <progress id="progress" max="100" min="0" value="0"></progress>
    
+    <script>
+       var progress = document.getElementById('progress');
+       progress.value = 80;
+    </script>
+   <br>
+   <p>Progresso carregando 10% por segundo com mensagem no final</p>
+   <progress id="progress1" max="100" min="0" value="0"></progress>
+   
+   <script>
+       var progress = document.getElementById('progress1');
+       const interval = setInterval(() => {
+       progress.value += 10;
+       if (progress.value >= 100) {
+           alert('Carregamento realizado com sucesso')
+           clearInterval(interval);
+       }
+   }, 1000);
+   </script>
+   <br>
+
+    <h1>Tag Mark e JavaScrip</h1>
+
+    <h1>Tag canvas 1</h1>
+
+    <h1>Tag canvas 2</h1>
+     
+    <h1>Novos atributos bem úteis no HTML5</h1>
+    </main>
+
+    <footer>
+        <h1><strong>Referencias:</strong></h1>
+        <a href=""><p>DIO</p></a>
+        <a href="https://developer.mozilla.org/"> <p>mdn web docs</p></a>
+        <a href="https://www.w3schools.com/tags/"><p>W3schools</p></a>
+        
+    </footer>
+
 </body>
 </html>
