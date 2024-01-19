@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/Details, summary</title>
+</head>
+<body>
+    <input type="text" id="busca"><br>
+    <p id="descricao">A Otan vai mobilizar mais de 1.200 veículos de combate, entre navios, caças, 
+        helicópteros, drones e tanques de guerra, no maior exercício militar desde a Guerra Fria. 
+        Eles se juntarão aos 90 mil soldados de países membros da aliança e da Suécia que serão convocados. 
+        O anúncio do exercício foi nesta quinta-feira.</p>
+    <script>
+        var searchField = document.getElementById('busca');
+        var descriptionObject = document.getElementById('descricao');
+        var textToSearch = descriptionObject.innerHTML;
+
+        function realizaBusca(busca) {
+            const regex = new RegExp(`(${busca})(?!(.(?!<mark))*</mark>)+`, 'ig');
+            const ocurrences = textToSearch.match(regex);
+            descricaoObj.innerHTML = textToSearch.replace(regex, `<mark>${busca}</mark>`)
+        }
+
+        searchField.addEventListener('keyup', (e) => realizaBusca(e.target.value));
+
+    </script> 
+
+</body>
+
+</html>
