@@ -2,22 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Canvas</title>
+    <!--Estilizando button com CSS (com efeito de foco)-->
+    <style>
+    .button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    }
+
+    .button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #04AA6D;
+    }
+
+    .button1:hover {
+    background-color: #04AA6D;
+    color: white;
+    }
+    </style>
+        
 </head>
 <body>
+    <h1>Exemplo de Canvas</h1>
+    <p>Muito utilizado em páginas de jogos, utiliza do Javascript para complementar sua configuração.</p>
     <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
     </canvas>
     <script>
-    const canvas = document.getElementById("myCanvas");
-    const ctx = canvas.getContext("2d");
-
-    ctx.beginPath();
-    ctx.moveTo(20, 20);
-    ctx.lineTo(20, 100);
-    ctx.lineTo(70, 100);
-    ctx.stroke();
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
     </script>
-
+  <h2>Quer ver mais exemplo?</h2>
+  <p>Acesse o site da w3 shools 
+  <a href="https://www.w3schools.com/html/html5_canvas.asp"><button class="button1" type="submit" >Clique aqui</button></a> ou 
+  <a href="https://www.w3schools.com/html/html5_canvas.asp">  <input type="submit"  value="Clique aqui" /></a></p>
 </body>
 </html>
