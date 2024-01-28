@@ -17,9 +17,10 @@
 
         
         <!-- pode ser colocado um nome para identificação e o Action seria para onde essas informações vão-->
-        Nome:  <input type="text" name="name" /><br><br>
-        Idade: <input type="number" name="age" /><br><br>
-        Senha: <input type="password" name="password" /><br>
+        Nome:  <input placeholder="Digite seu nome" type="text" name="name" autofocus required /><br><br>
+        Idade: <input placeholder="Digite sua idade"type="number" name="age" autofocus required /><br><br>
+        Senha: <input placeholder="Digite sua senha" type="password" name="password" autofocus required /><br>
+        <!--autofocus required faz com que o campo seja obrigátorio-->
         <br>
         <button type=" submit">Enviar</button>
         <br>
@@ -28,12 +29,12 @@
         <p><H2>Tags Input e seus tipos</H2></p> 
 
         Campo pra ser preenchido com:
-            <form>
+        <form>
             <label>Texto: </label><input type="tex"  /> <br><br> <!--caixa de Campo texto--> 
             <label>Numeros: </label><input type="number" min="0" max="99" /> <br><br>
             <label>Ranger: </label> <input type="range" min="0" max="100"/> max <br><br>
             <label>Color:</label> <input type="color"/> <br><br>
-            <label>E-mail:</label> <input type="email"/> <br><br>
+            <label>E-mail:</label> <input placeholder="Ex: meuemail@gmail.com" type="email"/> <br><br>
             <label>Url:</label> <input type="url"/> <br><br>
             <label>Date:</label> <input type="date"/> <br><br>
             <label>Week:</label> <input type="week"/> <!--Não funciona no firefox--> <br><br>
@@ -44,6 +45,9 @@
             <label>Hidden:</label> <input type="hidden"/> Informação a ser enviada sem ser vista pelo usuario <br><br> <!--Informação a ser enviada sem ser vista pelo usuario-->
             <label>Search:</label> <input type="search"/> <br><br>
             <label>button: </label><input type="submit" value="enviar" />
+            <br>
+            <label>Observações:</label><br>
+                <textarea minlength="10" maxlength="250" name="observation" id="observation" cols="100%" rows="S"></textarea>
         </form>
     
         <hr>
@@ -81,21 +85,27 @@
         <p><H2>Button e seus tipos</H2></p>
 
         <form method="get">
-            Nome:  <input type="text" name="name" /><br><br>
-            Idade: <input type="number" name="age" /><br><br>
-            Senha: <input type="password" name="password" /><br>
+            Nome:  <input placeholder="Digite seu nome" minlength="2" type="text" name="name" /><br><br>
+            Idade: <input type="number" name="age" disabled /><br><br>
+            Senha: <input placeholder="Digite sua senha" type="password" name="password" /><br>
+            <!--limitando caracteres min/max length-->
+            <fieldset>
+                <legend>Observações</legend>
+                <textarea minlength="10" maxlength="250" name="observation" id="observation" cols="100%" rows="S"></textarea>
+            </fieldset>
 
-            <button type="button" onclick="alert('Enviei o formulário')" target="" method="post" action="#"> Clicável</button><br> 
+            <button type="button" onclick="alert('Enviei o formulário')" target="" method="post" action="#"> Clicável</button>
             <!--onclick após clicar exibirar uma mensagem-->
             <button type="reset">limpar</button><br>
             <!--onclick após clicar exibirar uma mensagem-->
         </form>
-
+        <br>
+        <br>
         <form onsubmit="" method="get">
             <!--com o onsubmit entramos no javascript e serve para validar se os campos estão preenchidos corretamente-->
-            Nome *:  <input type="text" name="name" /><br><br>
-            Idade *: <input type="number" name="age" /><br><br>
-            Senha *: <input type="password" name="password" /><br>
+            Nome *:  <input placeholder="Digite seu nome" minlength="10" type="text" name="name" /><br><br>
+            Idade *: <input placeholder="Digite sua idade" maxlength="2" type="number" name="age" /><br><br>
+            Senha *: <input placeholder="Digite sua senha"  type="password" name="password" /><br>
             <button type="submit">Enviar</button>
             <!--com o atributo submit ele envia as informações-->
         </form>
@@ -106,7 +116,7 @@
         <form onsubmit="" method="get">
             <label>Nome:</label>  <input type="text" name="name" /><br><br>
             <label>Cargo</label>
-            <select name="role>"
+            <select name="role">
 
                 <option value="Selecione">Selecione o cargo</option>
                 <option value="Selecione">Selecione o cargo</option>
@@ -119,8 +129,7 @@
           <br>
           <br>  
             <label>Assunto:</label><input type="text" name="subject" /><br>
-            <label>Mensagem</label>
-            <textarea name="message"></textarea>     
+            <label>Mensagem</label> <textarea name="message"></textarea>     
             <button type="submit">Enviar</button>
         </form>
     </form>
